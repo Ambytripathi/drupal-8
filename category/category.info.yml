@@ -1,0 +1,14 @@
+name: Category Master
+type: module
+description: Creating Main/Sub Category.
+package: Category
+# core: 8.x
+configure: category.description
+dependencies:
+  - drupal:node
+
+# Information added by Drupal.org packaging script on 2017-03-15
+version: '1.0'
+core: '8.x'
+project: 'category'
+datestamp: 1489606986

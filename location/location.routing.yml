@@ -1,0 +1,91 @@
+# This routing.yml file makes both the fapi example description page and the
+# included sample forms available at specific URL's on your site. A route
+# maps a URL path to a controller. For page controllers it defines the
+# function or method that will be called when the page is accessed.  For form
+# controllers the content is determined by the buildForm method defined by the
+# form controller implementation.
+
+# Access to these paths is restricted to users with the permission
+# 'access content'. This is notated as _permission: 'access content'.
+
+# Menu items corresponding to these URLs are defined separately in the
+# fapi_example.links.menu.yml file.
+location.description:
+  path: '/location-master'
+  defaults:
+    _controller:  '\Drupal\location\Controller\Page::description'
+    _title: 'Location Master'
+  requirements:
+    _permission: 'Location Master'
+
+location.country_form:
+  path: '/location/country-master'
+  defaults:
+    _form:  '\Drupal\location\Form\CountryForm'
+    _title: 'Manage Country'
+  requirements:
+    _permission: 'Location Master'
+
+location.state_form:
+  path: '/location/state-master'
+  defaults:
+    _form:  '\Drupal\location\Form\StateForm'
+    _title: 'Manage State'
+  requirements:
+    _permission: 'Location Master'
+
+location.city_form:
+  path: '/location/city-master'
+  defaults:
+    _form:  '\Drupal\location\Form\CityForm'
+    _title: 'Manage City'
+  requirements:
+    _permission: 'Location Master'
+
+location.view_country:
+  path: '/location/view-country'
+  defaults:
+    _controller:  '\Drupal\location\Controller\Country::view'
+    _title: 'Country'
+  requirements:
+    _permission: 'Location Master'
+
+location.view_state:
+  path: '/location/view-state'
+  defaults:
+    _form:  '\Drupal\location\Form\StateViewForm'
+    _title: 'State'
+  requirements:
+    _permission: 'Location Master'
+
+location.view_city:
+  path: '/location/view-city'
+  defaults:
+    _form:  '\Drupal\location\Form\CityViewForm'
+    _title: 'City'
+  requirements:
+    _permission: 'Location Master'
+
+location.edit_country:
+  path: '/location/edit-country/{id}'
+  defaults:
+    _form:  '\Drupal\location\Form\EditCountry'
+    _title: 'Edit Country'
+  requirements:
+    _permission: 'Location Master'
+
+location.edit_state:
+  path: '/location/edit-state/{id}'
+  defaults:
+    _form:  '\Drupal\location\Form\EditState'
+    _title: 'Edit State'
+  requirements:
+    _permission: 'Location Master'
+
+location.edit_city:
+  path: '/location/edit-city/{id}'
+  defaults:
+    _form:  '\Drupal\location\Form\EditCity'
+    _title: 'Edit City'
+  requirements:
+    _permission: 'Location Master'

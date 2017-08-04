@@ -1,0 +1,6 @@
+name: User Details
+type: module
+description: 'User details'
+package: Custom
+core: 8.x
+hidden: false

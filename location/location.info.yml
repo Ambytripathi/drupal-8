@@ -1,0 +1,14 @@
+name: Location Master
+type: module
+description: Creating Country State City Master.
+package: Location
+# core: 8.x
+configure: location.description
+dependencies:
+  - drupal:node
+
+# Information added by Drupal.org packaging script on 2017-03-15
+version: '1.0'
+core: '8.x'
+project: 'location'
+datestamp: 1489606986

@@ -1,0 +1,4 @@
+'Location Master':
+  title: 'Location Master'
+  description: 'Allow user to create/edit the Location Master'
+  restrict access: TRUE

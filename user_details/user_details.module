@@ -1,0 +1,70 @@
+<?php
+use Drupal\user\Entity\User;
+use Drupal\Core\Mail\MailManagerInterface;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_form_alter().
+ */
+function user_details_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  switch ($form_id) {
+    // Alter login form and add own custom submit handler.
+    case 'user_login_form':
+      $form['#submit'][] = '_user_details_user_login_form_submit';
+      break;
+ 
+     
+     case 'introduce_forms_introduce_form':
+      $user = \Drupal::currentUser()->getRoles();
+	  if(in_array("guest", $user)) {
+		unset($form['field_nickname']);
+		unset($form['field_teaser']);
+		unset($form['field_description']);
+		unset($form['field_designation']);
+		unset($form['field_language']);
+		unset($form['field_tour_license']);
+		unset($form['field_id_passport_number']);
+		unset($form['field_upload_id']);
+	  }
+      break;
+ 
+     
+     case 'user_details_payment_form':
+      $user = \Drupal::currentUser()->getRoles();
+	  if(in_array("guest", $user)) {
+		unset($form['where_do_you_live']);
+		unset($form['where_do_you_live']['field_country']);
+		unset($form['where_do_you_live']['city']);
+		unset($form['address']['field_address2']);
+		unset($form['address']['state']);
+	  }
+      break;
+  }
+}
+/*
+/**
+ * Custom submit handler for login form.
+ */
+function _user_details_user_login_form_submit($form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  // Set redirect to login form.
+  //~ $form_state->setRedirect('profile/intro');
+  $user = \Drupal::currentUser()->getRoles();
+  if(in_array("editors", $user)){
+    $url = "/dashboard/editor-management";
+  }
+  elseif(in_array("management", $user)){
+  	$url = "/dashboard/experiences-management";
+  }
+  else {
+    $url = "/profile/intro";
+  }
+  
+  
+  $response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+  $response->send();
+  return;
+}
+
+
+

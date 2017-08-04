@@ -1,0 +1,178 @@
+user_details_introduce:
+  path: 'profile/intro'
+  defaults:
+    _form: '\Drupal\user_details\Form\IntroduceForm'
+    _title: 'Tell us more about yourself!'
+  requirements:
+    _permission: 'Profile Introduce'
+    
+    
+user_details_payment:
+  path: 'profile/payment'
+  defaults:
+    _form: '\Drupal\user_details\Form\PaymentForm'
+    _title: 'Payment Details'
+  requirements:
+    _permission: 'Profile Payment'
+    
+    
+user_details_contact:
+  path: 'profile/contact'
+  defaults:
+    _form: '\Drupal\user_details\Form\ContactForm'
+    _title: 'Contact Details'
+  requirements:
+    _permission: 'Profile Contact'
+    
+    
+user_details_location:
+  path: 'profile/location'
+  defaults:
+    _form: '\Drupal\user_details\Form\LocationForm'
+    _title: 'Location Details'
+  requirements:
+    _permission: 'Profile Location'
+    
+user_details_refer:
+  path: 'profile/refer-promoters'
+  defaults:
+    _form: '\Drupal\user_details\Form\ReferPromoters'
+    _title: 'Refer Promoters'
+  requirements:
+    _permission: 'Profile Refer'
+    
+user_details_refer_earn:
+  path: 'profile/refer-earn'
+  defaults:
+    _form: '\Drupal\user_details\Form\ReferEarn'
+    _title: 'Refer & Earn'
+  requirements:
+    _permission: 'Profile Refer'
+    
+user_details_view_refer_earn:
+  path: 'profile/view-refer-earn'
+  defaults:
+    _form: '\Drupal\user_details\Form\ViewReferEarn'
+    _title: 'View Refer & Earn'
+  requirements:
+    _permission: 'Profile Refer Earn'
+
+user_details_refer_diplomates:
+  path: 'profile/view-refer-experiences'
+  defaults:
+    _form: '\Drupal\user_details\Form\ViewReferDiplomates'
+    _title: 'Local Expert Experiences'
+  requirements:
+    _permission: 'Diplomates Refer Earn'
+
+user_details_refer_commission:
+  path: 'profile/view-refer-commission'
+  defaults:
+    _form: '\Drupal\user_details\Form\ViewReferCommission'
+    _title: 'Commission'
+  requirements:
+    _permission: 'Commission Refer Earn'
+
+user_details_changepassword:
+  path: 'profile/change-password'
+  defaults:
+    _form: '\Drupal\user_details\Form\ChangepasswordForm'
+    _title: 'Change Password'
+  requirements:
+    _permission: 'Profile Change Password'
+    
+user_details_otpcode:
+  path: 'profile/otpcode'
+  defaults:
+    _form: '\Drupal\user_details\Form\OtpverificationForm'
+    _title: 'OTP'
+  requirements:
+    _permission: 'Profile Contact'
+
+user_details.thankuPage:
+  path: 'profile/thankupage'
+  defaults:
+    _controller: '\Drupal\user_details\Controller\OtpController::thankuPage'
+    _title: 'Thank you'
+  requirements:
+    _permission: 'Profile Contact'   
+
+user_details.thankul:
+  path: 'profile/thank-you-localexpert'
+  defaults:
+    _controller: '\Drupal\user_details\Controller\OtpController::thank_you_localexpert'
+    _title: 'Thank you'
+  requirements:
+    _permission: 'Profile Contact' 
+    
+user_details.thankud:
+  path: 'profile/thank-you-diplomat'
+  defaults:
+    _controller: '\Drupal\user_details\Controller\OtpController::thank_you_diplomat'
+    _title: 'Thank you'
+  requirements:
+    _permission: 'Profile Contact' 
+    
+user_details.thankup:
+  path: 'profile/thank-you-promoter'
+  defaults:
+    _controller: '\Drupal\user_details\Controller\OtpController::thank_you_promoter'
+    _title: 'Thank you'
+  requirements:
+    _permission: 'Profile Contact' 
+    
+user_details.thankuo:
+  path: 'profile/thank-you'
+  defaults:
+    _controller: '\Drupal\user_details\Controller\OtpController::thank_you'
+    _title: 'Thank you'
+  requirements:
+    _permission: 'Profile Contact' 
+
+user_details.thanku:
+  path: 'dashboard/users-management'
+  defaults:
+    _form: '\Drupal\user_details\Form\UserManagementForm'
+    _title: 'User Management'
+  requirements:
+    _permission: 'User Management' 
+
+user_details.profilem:
+  path: 'dashboard/profile-management'
+  defaults:
+    _form: '\Drupal\user_details\Form\ProfileManagementForm'
+    _title: 'Profile Management'
+  requirements:
+    _permission: 'Management Approval' 
+
+user_details.profilee:
+  path: 'dashboard/profile-editor'
+  defaults:
+    _form: '\Drupal\user_details\Form\ProfileEditorForm'
+    _title: 'Profile Management'
+  requirements:
+    _permission: 'Editor Approval' 
+    
+user_details.getCity:
+  path: 'profile/getcity'
+  defaults:
+    _controller: '\Drupal\user_details\Controller\OtpController::getCity'
+    _title: 'Get City'
+  requirements:
+    _permission: 'city'   
+
+user_details.view_profile:
+  path: '/profile/{id}/view'
+  defaults:
+    _controller:  '\Drupal\user_details\Controller\OtpController::ViewProfile'
+    _title: 'View Profile'
+  requirements:
+    _permission: 'access content'
+user_details.get_countrycode:
+  path: '/getcountrycode'
+  defaults:
+    _controller:  '\Drupal\user_details\Controller\OtpController::getcountrycode'
+    _title: 'View Profile'
+  requirements:
+    _permission: 'access content'
+    

@@ -1,0 +1,71 @@
+user_details.introduce:
+  title: Profile
+  description: 'This is a introduce yourself form'
+  parent: profile-menu
+  route_name: user_details_introduce
+  weight: 0
+  menu_name: profile-menu
+
+user_details.contact:
+  title: Contact
+  description: 'This is a contact form'
+  parent: profile-menu
+  route_name: user_details_contact
+  weight: 1
+  menu_name: profile-menu
+
+user_details.location:
+  title: Location
+  description: 'This is a location form'
+  parent: profile-menu
+  route_name: user_details_location
+  weight: 2
+  menu_name: profile-menu
+    
+user_details.payment:
+  title: Payment
+  description: 'This is a payment form'
+  parent: profile-menu
+  route_name: user_details_payment
+  weight: 3
+  menu_name: profile-menu
+  
+user_details.refer_earn:
+  title: Refer & Earn
+  description: 'This is a refer & Earn form'
+  parent: profile-menu
+  route_name: user_details_refer_earn
+  weight: 5
+  menu_name: profile-menu
+  
+user_details.refer_diplomates:
+  title: Local Expert Experiences
+  description: 'This is a view list of experiences added by locat experts and reffered by diplomats'
+  parent: refer-earn
+  route_name: user_details_refer_diplomates
+  weight: 6
+  menu_name: refer-earn
+
+user_details.refer_commission:
+  title: Comission
+  description: 'Get the total commission earned by user'
+  parent: refer-earn
+  route_name: user_details_refer_commission
+  weight: 9
+  menu_name: refer-earn
+
+user_details.view_refer_earn:
+  title: View Refer & Earn
+  description: 'This is a view refer & Earn form'
+  parent: profile-menu
+  route_name: user_details_view_refer_earn
+  weight: 7
+  menu_name: profile-menu
+  
+user_details.changepassword:
+  title: Change Password
+  description: 'This is a change password form'
+  parent: profile-menu
+  route_name: user_details_changepassword
+  weight: 8
+  menu_name: profile-menu

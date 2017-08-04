@@ -1,0 +1,39 @@
+user-details:
+  version: 1
+  css:
+    theme:
+      assets/css/user_details.css: {}
+      https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css: {type: external}
+  js:
+    https://code.jquery.com/ui/1.12.1/jquery-ui.js: {type: external}
+    https://code.jquery.com/ui/1.12.1/jquery-ui.js: {type: external}
+    assets/js/user_details.js: {}
+  dependencies:
+      - core/jquery
+
+
+user-details-location:
+  version: 1
+  css:
+    theme:
+      assets/css/user_details.css: {}
+      https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css: {type: external}
+  js:
+    https://maps.googleapis.com/maps/api/js?libraries=geometry,places&ext=.js: {type: external}
+    https://code.jquery.com/ui/1.12.1/jquery-ui.js: {type: external}
+    assets/js/user_details_location.js: {}
+  dependencies:
+      - core/jquery
+      
+user-details-firebase:
+  version: 1
+  js:
+    https://www.gstatic.com/firebasejs/4.2.0/firebase.js: {type: external}
+    https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js: {type: external}
+    https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js: {type: external}
+    assets/js/firebase_init.js: {}
+    assets/js/otp_verification.js: {}
+  dependencies:
+      - core/jquery
+
+

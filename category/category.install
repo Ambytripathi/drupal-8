@@ -1,0 +1,41 @@
+<?php
+
+// function category_schema() {
+//   $schema['custom_category'] = array(
+//     'fields' => array(
+//       'id'=>array(
+//         'type'=>'serial',
+//         'not null' => TRUE,
+//       ),
+//       'category_name'=>array(
+//         'type' => 'varchar',
+//         'length' => 40,
+//         'not null' => TRUE,
+//       ),
+//     ),
+//     'primary key' => array('id'),
+//   );
+
+//   $schema['custom_sub_category'] = array(
+//     'fields' => array(
+//       'id'=>array(
+//         'type'=>'serial',
+//         'not null' => TRUE,
+//       ),
+//       'cat_id'=>array(
+//         'type' => 'varchar',
+//         'length' => 40,
+//         'not null' => TRUE,
+//       ),
+//       'category_name'=>array(
+//         'type' => 'varchar',
+//         'length' => 40,
+//         'not null' => TRUE,
+//       ),
+//     ),
+//     'primary key' => array('id'),
+//   );
+
+//   return $schema;
+
+// }

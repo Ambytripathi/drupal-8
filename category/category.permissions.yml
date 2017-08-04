@@ -1,0 +1,4 @@
+'Category Master':
+  title: 'Category Master'
+  description: 'Allow user to create/edit the Category Master'
+  restrict access: TRUE

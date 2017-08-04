@@ -1,0 +1,6 @@
+location.description:
+  title: Location Master
+  description: Manage Country State and City.
+  route_name: location.description
+  parent: system.admin_config
+

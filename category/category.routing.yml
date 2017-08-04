@@ -1,0 +1,78 @@
+# This routing.yml file makes both the fapi example description page and the
+# included sample forms available at specific URL's on your site. A route
+# maps a URL path to a controller. For page controllers it defines the
+# function or method that will be called when the page is accessed.  For form
+# controllers the content is determined by the buildForm method defined by the
+# form controller implementation.
+
+# Access to these paths is restricted to users with the permission
+# 'access content'. This is notated as _permission: 'access content'.
+
+# Menu items corresponding to these URLs are defined separately in the
+# fapi_example.links.menu.yml file.
+category.description:
+  path: '/category-master'
+  defaults:
+    _controller:  '\Drupal\category\Controller\Page::description'
+    _title: 'Category Master'
+  requirements:
+    _permission: 'Category Master'
+
+category.category_form:
+  path: '/category/category-master'
+  defaults:
+    _form:  '\Drupal\category\Form\CategoryForm'
+    _title: 'Add Category'
+  requirements:
+    _permission: 'Category Master'
+
+category.view_category:
+  path: '/category/view-category'
+  defaults:
+    _form:  '\Drupal\category\Form\ViewCategory'
+    _title: 'View Category'
+  requirements:
+    _permission: 'Category Master'
+
+category.edit_category:
+  path: '/category/edit-category/{id}'
+  defaults:
+    _form:  '\Drupal\category\Form\EditCategory'
+    _title: 'Edit Category'
+  requirements:
+    _permission: 'Category Master'
+
+category.sub_category_form:
+  path: '/category/sub-category-master'
+  defaults:
+    _form:  '\Drupal\category\Form\SubCategoryForm'
+    _title: 'Add Sub-Category'
+  requirements:
+    _permission: 'Category Master'
+
+category.view_sub_category:
+  path: '/category/view-sub-category'
+  defaults:
+    _form:  '\Drupal\category\Form\ViewSubCategory'
+    _title: 'View Sub Category'
+  requirements:
+    _permission: 'Category Master'
+
+category.edit_sub_category:
+  path: '/category/edit-sub-category/{id}'
+  defaults:
+    _form:  '\Drupal\category\Form\EditSubCategory'
+    _title: 'Edit Sub Category'
+  requirements:
+    _permission: 'Category Master'
+
+
+category.delete_category:
+  path: '/category/delete-category/{id}'
+  defaults:
+    _controller:  '\Drupal\category\Controller\Delete::subcategory'
+    _title: 'Delete Category'
+  requirements:
+    _permission: 'Category Master'
+
+

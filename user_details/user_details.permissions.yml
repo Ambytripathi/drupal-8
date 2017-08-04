@@ -1,0 +1,60 @@
+
+'Profile Introduce':
+  title: 'Profile Introduce'
+  description: 'Introduce yourself permission.'
+  restrict access: true
+
+'Profile Payment':
+  title: 'Profile Payment'
+  description: 'Payment detail permission to the users.'
+  restrict access: true
+
+'Profile Location':
+  title: 'Profile Location'
+  description: 'Location permission.'
+  restrict access: true
+
+'Profile Contact':
+  title: 'Profile Contact'
+  description: 'Contact detail permission.'
+  restrict access: true
+
+'Profile Refer':
+  title: 'Profile Refer'
+  description: 'Refer detail permission.'
+  restrict access: true
+
+'Profile Refer Earn':
+  title: 'Profile Refer Earn'
+  description: 'Refer Earn detail.'
+  restrict access: true
+  
+'Profile View Refer Earn':
+  title: 'Profile View Refer Earn'
+  description: 'View Refer Earn detail.'
+  restrict access: true
+
+'Profile View Refer Earn':
+  title: 'Profile View Refer Earn'
+  description: 'View Refer Earn detail.'
+  restrict access: true
+
+'Profile Change Password':
+  title: 'Profile Change Password'
+  description: 'Change Password permission.'
+  restrict access: true
+  
+'Diplomates Refer Earn':
+  title: 'Reffer By Diplomats'
+  description: 'Reffer By Diplomats.'
+  restrict access: true
+
+'Commission Refer Earn':
+  title: 'Commission'
+  description: 'User Commission.'
+  restrict access: true
+  
+'User Management':
+  title: 'User Management'
+  description: 'User Management'
+  restrict access: true

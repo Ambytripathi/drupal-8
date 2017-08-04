@@ -1,0 +1,22 @@
+#map {
+    height: 300px;
+    width: 100%;
+}
+
+#introduce-forms-introduce-form #edit-field-language {
+    border: 1px solid #ddd;
+    height: 90px;
+    overflow-y: scroll;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+.profile-image-block #ajax-wrapper #edit-user-picture-upload,
+.profile-image-block .alert-success{
+	display: none;
+}
+
+.profile-image-block .img-block .display-icon,
+.profile-image-block .img-block .img-circle{
+	cursor: pointer;
+}
